@@ -18,6 +18,6 @@ void main()
         textureColor.rgb += vElevation * 1.5 + 0.025;
         gl_FragColor = textureColor;
     } else {
-        gl_FragColor = vec4(vBackColor + vElevation * 1.5 + 0.025, 1.0);
+        gl_FragColor = vec4(vBackColor - vElevation * 1.5 - 0.025, 1.0);
     }
 }
