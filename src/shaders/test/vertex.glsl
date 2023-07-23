@@ -1,16 +1,20 @@
-  uniform mat4 projectionMatrix;
-  uniform mat4 viewMatrix;
-  uniform mat4 modelMatrix;
+//   uniform mat4 projectionMatrix;
+//   uniform mat4 viewMatrix;
+//   uniform mat4 modelMatrix;
   uniform vec2 uFrequency;
   uniform float uTime;
+  uniform vec3 uBackColor;
 
-  attribute vec3 position;
-  attribute float aRandom;
-  attribute vec2 uv;
+//   attribute vec3 position;
+//   attribute float aRandom;
+//   attribute vec2 uv;
 
 //   varying float vRandom;
   varying vec2 vUv;
   varying float vElevation;
+  varying vec3 vPosition;
+  varying vec3 vNormal;
+  varying vec3 vBackColor;
 
   void main()
   {
@@ -32,4 +36,7 @@
     // vRandom = aRandom;
     vUv = uv;
     vElevation = elevation;
+    vPosition = position;
+    vNormal = normal;
+    vBackColor = uBackColor;
   }

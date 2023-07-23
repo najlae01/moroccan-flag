@@ -38,14 +38,15 @@ for (let i = 0; i < count; i++) {
 geometry.setAttribute('aRandom', new THREE.BufferAttribute(random, 1))
 
 // Material
-const material = new THREE.RawShaderMaterial({
+const material = new THREE.ShaderMaterial({
   vertexShader: testVertexShader,
   fragmentShader: testFragmentShader,
   side: THREE.DoubleSide,
+  lights: false,
   uniforms: {
     uFrequency: { value: new THREE.Vector2(10, 5) },
     uTime: { value: 0 },
-    // uColor: { value: "#ff0000"},
+    uBackColor: { value: new THREE.Color('#C1272D') },
     uTexture: { value: texture },
   },
   //wireframe: true
