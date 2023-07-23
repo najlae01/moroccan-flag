@@ -1,4 +1,4 @@
-# Three.js Journey
+# Moroccan Flag
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
